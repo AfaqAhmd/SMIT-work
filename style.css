@@ -1,0 +1,19 @@
+/* td{border: 2px solid black;} */
+table{
+text-align: center;
+}
+
+.element{
+    font-size: 30px;
+}
+.hyd{background-color: #17a69c;}
+.first{background-color: #f2c416;}
+.second{background-color: #e77e27;}
+.third{background-color: #2281bc;}
+.red{background-color: #ea4c3c;}
+.green{background-color: #50b849;}
+.gray{background-color: #808d8f;}
+.ruby{background-color: #d91b5c;}
+.last{background-color: #8a589a;}
+.blue{background-color: #3d5774;}
+
