@@ -1,0 +1,245 @@
+/* Root Variables */
+:root {
+    --primary: #F1A501;
+    --secondary: #DF6951;
+    --text-dark: #181E4B;
+    --text-light: #5E6282;
+    --bg-light: #FFF1DA;
+    --gray-bg: #f9f9f9;
+  }
+  
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-dark);
+    background: #fff;
+    line-height: 1.6;
+  }
+  
+  header {
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-family: 'Volkhov', serif;
+    color: var(--text-dark);
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+
+  nav .sign {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 5px 20px;
+    border-radius: 8px;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 5% 10%;
+    background: linear-gradient(140deg, var(--bg-light) 0%, #FFFFFF 100%);
+    flex-wrap: wrap;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-text h1 {
+    font-family: 'Volkhov', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-dark);
+  }
+  
+  .hero-text p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-text button {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .hero-img {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .hero-img img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .services,
+  .destinations,
+  .steps,
+  .testimonials,
+  .partners,
+  .newsletter {
+    padding: 5% 10%;
+    text-align: center;
+  }
+  
+  .services h2,
+  .destinations h2,
+  .steps h2,
+  .testimonials h2,
+  .partners h2,
+  .newsletter h2 {
+    font-size: 3rem;
+    font-family: 'Volkhov', serif;
+    margin-bottom: 2rem;
+  }
+  
+  .service-cards,
+  .destination-cards,
+  .step-cards,
+  .testimonial-cards,
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .card,
+  .destination,
+  .step,
+  .testimonial {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    transition: all 0.3s ease;
+  }
+
+  .card img{
+    width: 200px;
+  }
+ 
+  
+  .card:hover,
+  .destination:hover,
+  .step:hover,
+  .testimonial:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card h3,
+  .step h3,
+  .destination h3 {
+    margin-top: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .destination img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial strong {
+    color: var(--text-dark);
+  }
+  
+  .logos img {
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.7;
+  }
+  
+  .newsletter form {
+    margin-top: 1rem;
+  }
+  
+  .newsletter input {
+    padding: 0.75rem;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  
+  .newsletter button {
+    padding: 0.75rem 1.5rem;
+    background: var(--secondary);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  footer {
+    padding: 3rem 10%;
+    background: var(--gray-bg);
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-nav div {
+    min-width: 150px;
+  }
+  
+  .footer-nav h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .footer-nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+  
+  footer p {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
