@@ -3,177 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlfaLap.pk</title>
+    <title>Portfolio</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./images/android-chrome-512x512.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- google font link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-    </script>
+    <!-- bootstrap css cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <style>
+        body{
+            font-size: 20px;
+        }
+        :root{
+            --blue-color:#020617;
+            --yellow-color:#facc15;
+            --corbeau-color:#111827;
+            --cor-text-color:#6B7280;
+
+            font-family: "Lexend Deca", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .hero{
+            background-color:var(--corbeau-color) ;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                }
+
+                .hero img {
+                max-width: 100%;
+                height: auto;
+                }
+
+                .about img {
+                max-width: 100%;
+                height: auto;
+                }
+
+                .service p{
+                    color: var(--cor-text-color);
+                }
+                .card{
+                    background-color: var(--blue-color);
+                    color: white;
+                }
+
+                .card i{
+                    font-size: 2rem;
+                    color: var(--yellow-color);
+                }
+
+                .portfolio{
+                    background-color: var(--blue-color);
+                    color: white;
+                }
+                .experience{
+                    background-color: var(--corbeau-color);
+                    color: white;
+                }
+                  .experience p{
+                    color: var(--cor-text-color);
+                }
+
+                .contact{
+                    background-color: var(--blue-color);
+                    color: white;
+                }
+                .contact p{
+                    color: var(--cor-text-color);
+                }
+                .contact .addr a{
+                    color: var(--cor-text-color) !important;
+                    text-decoration: none;
+                }
+
+                .contact form input, 
+                .contact form textarea{
+                    background-color: #1f2937;
+                    border: none;
+                     color: #fff !important;
+                     padding: 20px;
+                }
+                .contact form input::placeholder,
+                .contact form textarea::placeholder {
+                color: #bbb;
+                }
+
+                .contact form input:focus,
+                .contact form textarea:focus{
+                    background-color: #1f2937;
+                }
+
+                .socail i
+                { font-size: 2rem;
+                    margin-left: 10px;
+                    margin-top: 30px;
+                    color:#1f2937;
+                }
+                .socail i:hover{
+                    color: var(--yellow-color);
+                    cursor: pointer;
+                }
+
+                #goTopBtn{
+                         display: none; /* Hidden by default */
+                        position: fixed;
+                        bottom: 40px;
+                        right: 30px;
+                        z-index: 99;
+                        font-size: 18px;
+                        border: none;
+                        outline: none;
+                        background-color: var(--yellow-color); /* match your theme */
+                        color: black;
+                        cursor: pointer;
+                        padding: 8px 8px;
+                        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                #goTopBtn:hover {
+                    background-color: #ff9307;
+                    }
+    </style>
+
+
 
 </head>
 <body>
 
-    <div class="main">
-        <div class="header">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">AlfaLap.pk</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#products">Products</a>
-                        </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about">About</a>
-                      </li> 
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#contact">Contact Us</a>
-                      </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
-                </div>
-              </nav>
+    <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: var(--blue-color);">
+        <div class="container">
+        <!-- Logo on the left -->
+        <a class="navbar-brand text-white" href="#">
+            <img src="./images/AboutMe.png" alt="Logo" style="max-height: 40px;">
+        </a>
+
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <i class="fa fa-bars text-white fs-2"></i>
+</button>
+
+        <!-- Nav links on the right -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link text-white" href="#about">About me</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#ser">Services</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#proj">Projects</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#cont">Contact</a></li>
+            </ul>
         </div>
-
-        <div class="heroSection">
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://cdn.mos.cms.futurecdn.net/UbMJMVGeKd2UvjMvkZZPX6.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://www.livemint.com/lm-img/img/2025/02/21/600x338/best_laptop_under_Rs_30000_1740122015828_1740122045813.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://www.digitaltrends.com/wp-content/uploads/2024/07/surface-laptop-7-06.jpg?fit=720%2C720&p=1" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
         </div>
-
-        <div class="cards-main d-flex justify-content-center gap-5 mt-5 flex-wrap" id="products">
-            <div class="card" style="width: 18rem;">
-                <img src="./images/img-1.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Samsung</h5>
-                  <p class="card-text">Samsung Chromebook 4 - Intel Pentium Celeron N4000 Processor 4GB 32GB eMMC Intel HD 600 Graphics 11.6" HD 720p Display Chrome OS (Silver, Open Box)</p>
-                  <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./images/img-2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">HP ChromeBook</h5>
-                  <p class="card-text">HP ChromeBook 11MK G9 - MediTek MT8183 Processor 4GB 32GB eMMC Mediatek Integrated Graphics 11.6" HD 720p Diagonal AG Display SD Card Reader Chrome OS (Black, NEW)</p>
-                  <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./images/img-3.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Dell Latitude</h5>
-                  <p class="card-text">Dell Latitude 14 7490 - 8th Gen Core i5 8350u QuadCore Processor 8-GB 256-GB SSD Intel UHD 620 GC 14" HD 720p 60Hz Display Backlit KB W10 Pro (Carbon Fiber Black, Used)</p>
-                  <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-              </div>
-              <div class="card" style="width: 18rem;">
-                <img src="./images/img-4.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Dell Latitude</h5>
-                  <p class="card-text">Dell Latitude 15 5500 - Whiskey Lake - 8th Gen Core i5 8365u Quadcore Processor 8-GB 256-GB SSD Intel UHD 620 GC 15.6" Full HD 1080p Display Backlit KB W10 Pro (Black, Used)
-                </p>
-                  <a href="#" class="btn btn-primary">Add to Cart</a>
-                </div>
-              </div>
-              
-        </div>
+    </nav>
+    </header>
 
 
-        <div class="container mt-5" id="about">
-            <h1 class="display-3">Our Story</h1>
-            <p>
-                2006. E-commerce was in its infancy in Pakistan. The smartphone revolution had not yet kicked off, and laptops were scarcely available. There were very few people who were well-versed in tech trends, and a limited number of places that specialized in tech gadgets. Pakistan, on the overall, was slow to embrace the importance of technology in the country’s development. But myshop.pk, formerly myshop.com.pk, and officially known as MyShop Online, already saw technology’s potential.
-                
-                The company started out as an online portal where people could find information about a variety of laptops, smartphones and related accessories from the comforts of their home. As the country’s IT and technology sector grew, so did our company.</p>
-            
-          </div>
+    <section class="hero container-fluid p-5">
+        <div class="container">
 
-          <div class="container d-flex justify-content-center gap-5 mt-5 flex-wrap">
-            <div class="card border-0" style="width: 18rem;">
-                <img src="./images/cash-on-delivery.svg" class="card-img-top" alt="..." style="width: 150px;">
-                <div class="card-body">
-                  <p class="card-text">With our advanced payment module you can select the payment menthod that fits! And always secure!</p>
-                </div>
-              </div>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <p style="color: var(--yellow-color);">Hello, welcome</p>
+                    <h1>I'm Anderson Coper</h1>
+                    <P>A passionate designer & front-end developer crafting beautiful and user-friendly digital experiences for modern businesses.</P>
+                         <!-- <button onclick="window.location.href='#ss'" type="button" style="background-color:var(--yellow-color); color: black;" class="btn btn-lg">My Services<i class="fa-solid fa-arrow-right p-2"></i></button>                        -->
+                    </div> 
 
-              <div class="card border-0" style="width: 18rem;">
-                <img src="./images/delivery-truck.svg" class="card-img-top" alt="..." style="width: 150px;">
-                <div class="card-body">
-                  <p class="card-text">Benefit from our shipping to get your products wherever you need them.</p>
-                </div>
-              </div>
 
-              <div class="card border-0" style="width: 18rem;">
-                <img src="./images/alternate-shield.svg" class="card-img-top" alt="..." style="width: 150px;">
-                <div class="card-body">
-                  <p class="card-text">We take security very seriously. This is why we don’t store your data and encrypt all transactions.</p>
-                </div>
-              </div>
-            
-        </div>
-
-        <div class="contact mt-5" id="contact">
-            <div class="container">
-
-                <form class="row g-3">
-                    <div class="col-md-6">
-                  <label for="inputname" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="inputname">
-                </div>
-                    <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Email*</label>
-                        <input type="email" class="form-control" id="inputEmail4">
+                    <div class="col-md-6 text-center">
+                        <img src="./images/heroSec.png" alt="">
                     </div>
-
-                    <div class="col-md-12">
-                        <label for="Textarea1">Message*</label>
-                        <textarea class="form-control" id="Textarea1" rows="3"></textarea>
-                      </div>
-                
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </div>
-            </form>
-        </div>
-        </div>
-        
-          <footer class="bg-body-tertiary text-center text-lg-start mt-5">
-            
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-              © 2025 Copyright:
-              <a class="text-body" href="https://www.alfaLap.pk">AlfaLap.pk</a>
             </div>
-           
-          </footer>
+                
+        </div>
+    </section>
+
+
+
+    <section id="about" style="background-color: var(--blue-color); color: white;" class="container-fluid about">
+        <div class="container p-5">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 mb-4 mb-md-0"><img src="images/about.png"></div>
+
+                <div class="col-md-6">
+                    <h2>About <Span style="color: var(--yellow-color);">Me</Span></h2>
+                    <p>I’m a passionate designer and front-end developer with a strong eye for detail and a love for clean, modern design. With over 5 years of experience in creating intuitive and visually appealing digital products, I’ve worked with startups and established brands to bring ideas to life. </p>
+                    <p>I specialize in crafting user-friendly interfaces, responsive layouts, and creative design solutions that not only look great but also perform seamlessly across devices. My goal is to blend creativity with functionality to deliver impactful digital experiences.
+</p>
+
+                    <button onclick="window.location.href='#cont'" type="button" style="background-color:var(--yellow-color); color: black;" class="btn btn-lg">Contact me<i class="fa-solid fa-arrow-right p-2"></i></button>                        
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <Section id="ser" style="background-color: var(--corbeau-color); color: white;" class="container-fluid service py-5">
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="py-3">My <span style="color: var(--yellow-color);">Services</span></h2>
+                    <p>I offer a range of creative and technical services to help businesses grow and thrive in the digital world. From crafting visually appealing user interfaces to building responsive and efficient websites, my focus is on delivering high-quality solutions tailored to your brand's needs. Whether you're launching a new product or refreshing your online presence, I bring a user-first approach to every project.
+</p>
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card card-body text-center">
+                            <div class="card-icon mb-3"><i class="fa-solid fa-bullhorn"></i></div>
+                            <h2 class="card-title ">Digital Marketing</h2>
+                            <p class="card-text">Helping brands grow with strategic digital campaigns, content creation, and data-driven results.
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card card-body text-center">
+                            <div class="card-icon mb-3"><i class="fa-solid fa-code"></i></div>
+                            <h2 class="card-title ">Web Development</h2>
+                            <p class="card-text">Building fast, responsive websites using modern technologies like HTML5, CSS3, JavaScript, and React.
+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card card-body text-center">
+                            <div class="card-icon mb-3"><i class="fa-solid fa-pen-ruler"></i></div>
+                            <h2 class="card-title ">Creative Graphic Design</h2>
+                            <p class="card-text">Designing visually appealing assets including logos, banners, and marketing materials that boost brand presence.
+</p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+    </Section>
+
+
+
+    <section id="proj" class="container-fluid portfolio">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-6">
+                    <h2>My <span style="color: var(--yellow-color);">Portfolio</span></h2>
+                    <p>A curated collection of recent design and development projects — each crafted with attention to detail and user experience in mind.
+</p>
+                </div>
+
+            </div>
+
+
+            <div class="row mt-5 g-4">
+      <!-- Left large image -->
+      <div class="col-lg-6">
+        <img src="./images/portfolio-1.png" class="img-fluid rounded-4 w-100 h-100 object-fit-cover" alt="Portfolio Image">
+      </div>
+
+      <!-- Right grid (2x2) -->
+      <div class="col-lg-6">
+        <div class="row g-4">
+          <div class="col-6">
+            <img src="./images/portfolio-2.png" class="img-fluid rounded-4 w-100 h-100 object-fit-cover" alt="Image 2">
+          </div>
+          <div class="col-6">
+            <img src="./images/portfolio-3.png" class="img-fluid rounded-4 w-100 h-100 object-fit-cover" alt="Image 3">
+          </div>
+          <div class="col-6">
+            <img src="./images/portfolio-4.png" class="img-fluid rounded-4 w-100 h-100 object-fit-cover" alt="Image 4">
+          </div>
+          <div class="col-6">
+            <img src="./images/portfolio-5.png" class="img-fluid rounded-4 w-100 h-100 object-fit-cover" alt="Image 5">
+          </div>
+        </div>
+      </div>
     </div>
-    
+        </div>
+
+    </section>
+
+
+
+    <section class="container-fluid experience">
+        <div class="container py-5">
+
+            <div class="row py-5">
+                <div class="col-lg-8">
+                    <h2>My <span style="color: var(--yellow-color);">Experience</span></h2>
+                    <p>Over the years, I’ve had the opportunity to work with a variety of clients and teams, each experience helping me grow both creatively and technically. From designing intuitive user interfaces to leading development on complex web projects, I’ve consistently delivered results that align with business goals. My background spans across UX/UI design, front-end development, and branding — giving me a well-rounded perspective on building impactful digital products.
+</p>
+                    </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body py-4">
+                            <h5>June-2002 - 2020</h5>
+                            <h3 style="color: var(--yellow-color);">UX/UI Designer</h3>
+                            <h6>Figma</h6>
+                            <p>Designed intuitive web interfaces for SaaS platforms, enhancing usability and increasing user engagement by 30%.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body py-4">
+                            <h5>June-2002 - 2020</h5>
+                            <h3 style="color: var(--yellow-color);">Product Designer</h3>
+                            <h6>Adobe Photoshop</h6>
+                            <p>Led product design for creative tools used by thousands of designers globally, focusing on mobile-first design principles.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body py-4">
+                            <h5>June-2002 - 2020</h5>
+                            <h3 style="color: var(--yellow-color);">Graphic Designer</h3>
+                            <h6>Figma</h6>
+                            <p>Delivered custom branding and design work for startups, including logos, brand guidelines, and marketing assets.
+</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="cont" class="container-fluid contact">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2>Contact <span style="color: var(--yellow-color);">Me</span></h2>
+                    <p>Let’s connect! I’m available for freelance projects, collaborations, or full-time opportunities. Drop me a message and I’ll get back to you shortly.
+</p>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-between align-items-center addr">
+                <div class="col-md-4">
+
+                        <p><span style="color: var(--yellow-color);">Address _ </span> 23 S 80 Road, Benedict,ne, 68316 United States</p>
+                        <p><span style="color: var(--yellow-color);">Phone _ </span><a class="link-light" href="callto:#">+01 123 456 789</a> </p>
+                        <p><span style="color: var(--yellow-color);">E mail _ </span><a class="link-light" href="mailto:#">abc.xyz@gmail.com</a></p>
+                        <p><span style="color: var(--yellow-color);">Website _</span><a class="link-light" href="#">www.abc.xyz.com</a></p>
+
+                </div>
+
+                <div class="col-md-4">
+                    <form>
+                            <div class="mb-3">
+                            <input type="email"  class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                            </div>
+
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Message" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+                             <button type="button" style="background-color:var(--yellow-color); color: black;" class="btn btn-md mt-3">Send Message </button>        
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="my-5 pt-5 text-center">
+                <h2>Let’s Create Something <span style="color: var(--yellow-color);">Amazing.</span></h2>
+                <p>Whether you're looking to launch a project, redesign your brand, or just want to connect, I'm always open to new opportunities. Let's turn your vision into reality and make something truly impactful together.
+
+ </p>
+
+                <div class="socail d-flex text-center align-items-center justify-content-center ">
+                   
+                    <div><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-twitter"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-linkedin"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+                    <div><a href="#"><i class="fa-brands fa-pinterest"></i></a></div>
+                </div>
+
+                
+            </div>
+
+        </div>
+        <button onclick="topFunction()" id="goTopBtn" title="top">Top</button>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+            <script>
+            // Show the button when user scrolls down 100px
+            window.onscroll = function() {
+                document.getElementById("goTopBtn").style.display = 
+                document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 
+                ? "block" 
+                : "none";
+            };
+
+            // Scroll to the top when button is clicked
+            function topFunction() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            </script>
+
+    <!-- bootstrap js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>
